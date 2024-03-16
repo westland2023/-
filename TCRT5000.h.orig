@@ -1,0 +1,34 @@
+#ifndef __TCRT5000_H
+#define __TCRT5000_H
+
+typedef struct
+{
+	uint8_t data[9]; 
+	uint8_t TCRT5000_ErrorTypeDef;
+}TCRT5000_ReadDataDef;
+
+typedef enum
+{ 
+		TCRT5000_Error_Left8 = 0x0,
+		TCRT5000_Error_Left7 = 0x0,
+		TCRT5000_Error_Left6 = 0x0,
+		TCRT5000_Error_Left5 = 0x0,
+	TCRT5000_Error_Left4 = 0x0,
+	TCRT5000_Error_Left3 = 0x0,
+	TCRT5000_Error_Left2 = 0x0,
+	TCRT5000_Error_Left1 = 0x0,
+	TCRT5000_Error_Center = 0x0,
+	TCRT5000_Error_Right1 = 0x0,
+	TCRT5000_Error_Right2 = 0x0,
+	TCRT5000_Error_Right3 = 0x0,
+	TCRT5000_Error_Right4 = 0x0,
+		TCRT5000_Error_Right5 = 0x0,
+		TCRT5000_Error_Right6 = 0x0,
+		TCRT5000_Error_Right7 = 0x0,
+		TCRT5000_Error_Right8 = 0x0
+}TCRT5000_ErrorTypeDef;
+
+void TCRT5000_Init(void);
+TCRT5000_ReadDataDef TCRT5000_read(void);
+
+#endif
